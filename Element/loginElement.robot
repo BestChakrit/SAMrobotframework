@@ -2,10 +2,12 @@
 Library        Selenium2Library 
 Library        BuiltIn
 
-***Keywords***
+*** Variables ***
+${URL}    http://samsvoatest.ar.co.th/
+${Txtusername}     u_username
+${Txtpassword}     u_pwd 
+${Btnlogin}        btn_signin
 
-txt_User  =  'u_username'
-txt_Password  =  'u_pwd'
 
 
 ##'//*[@id="u_pwd"]'
