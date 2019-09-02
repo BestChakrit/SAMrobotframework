@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190902 10:36:59.932" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
+<suite source="C:\Users\chakrits\Desktop\Robot Framework SAM\TestCase\loginSuite.robot" id="s1" name="loginSuite">
+<test id="s1-t1" name="TC-005 : Login โดยระบุ User ,Password และกำหนด Remember Me">
+<kw name="Login input User Password and Remember Me" library="loginKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://samsvoatest.ar.co.th/</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20190902 10:37:00.226" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
+<status status="PASS" endtime="20190902 10:37:04.853" starttime="20190902 10:37:00.226"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20190902 10:37:04.917" starttime="20190902 10:37:04.853"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190902 10:37:06.052" starttime="20190902 10:37:04.917"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20190902 10:37:06.053" level="INFO">Typing text 'admin' into text field 'u_username'.</msg>
+<status status="PASS" endtime="20190902 10:37:06.156" starttime="20190902 10:37:06.052"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_pwd</arg>
+<arg>@$R12345</arg>
+</arguments>
+<msg timestamp="20190902 10:37:06.156" level="INFO">Typing text '@$R12345' into text field 'u_pwd'.</msg>
+<status status="PASS" endtime="20190902 10:37:06.262" starttime="20190902 10:37:06.156"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//Class[@Class="iCheck-helper"]</arg>
+</arguments>
+<msg timestamp="20190902 10:37:06.262" level="INFO">Clicking element '//Class[@Class="iCheck-helper"]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190902 10:37:06.588" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190902 10:37:06.588" starttime="20190902 10:37:06.278"></status>
+</kw>
+<msg timestamp="20190902 10:37:06.591" level="FAIL">Element with locator '//Class[@Class="iCheck-helper"]' not found.</msg>
+<status status="FAIL" endtime="20190902 10:37:06.591" starttime="20190902 10:37:06.262"></status>
+</kw>
+<status status="FAIL" endtime="20190902 10:37:06.591" starttime="20190902 10:37:00.225"></status>
+</kw>
+<tags>
+<tag>positive</tag>
+</tags>
+<status status="FAIL" endtime="20190902 10:37:06.592" critical="yes" starttime="20190902 10:37:00.223">Element with locator '//Class[@Class="iCheck-helper"]' not found.</status>
+</test>
+<doc>LOGIN</doc>
+<status status="FAIL" endtime="20190902 10:37:06.595" starttime="20190902 10:36:59.936"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">positive</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="loginSuite" pass="0">loginSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

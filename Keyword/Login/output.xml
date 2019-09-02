@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190830 14:18:57.251" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
+<suite source="C:\Users\chakrits\Desktop\Robot Framework SAM\Keyword\Login\login.robot" id="s1" name="Login">
+<test id="s1-t1" name="Test Search Google">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.co.th/</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20190830 14:18:57.532" level="INFO">Opening browser 'gc' to base url 'https://www.google.co.th/'.</msg>
+<status status="PASS" endtime="20190830 14:19:13.374" starttime="20190830 14:18:57.532"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>q</arg>
+<arg>Robot</arg>
+</arguments>
+<msg timestamp="20190830 14:19:13.380" level="INFO">Typing text 'Robot' into text field 'q'.</msg>
+<status status="PASS" endtime="20190830 14:19:14.184" starttime="20190830 14:19:13.379"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190830 14:19:16.584" starttime="20190830 14:19:14.185"></status>
+</kw>
+<status status="PASS" endtime="20190830 14:19:16.585" critical="yes" starttime="20190830 14:18:57.532"></status>
+</test>
+<doc>TEST SAM</doc>
+<status status="PASS" endtime="20190830 14:19:16.586" starttime="20190830 14:18:57.266"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Login" pass="1">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
