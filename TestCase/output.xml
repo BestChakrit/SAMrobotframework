@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20190902 10:36:59.932" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
-<suite source="C:\Users\chakrits\Desktop\Robot Framework SAM\TestCase\loginSuite.robot" id="s1" name="loginSuite">
-<test id="s1-t1" name="TC-005 : Login โดยระบุ User ,Password และกำหนด Remember Me">
-<kw name="Login input User Password and Remember Me" library="loginKeyword">
+<robot rpa="false" generated="20190902 11:18:19.164" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
+<suite source="C:\Users\chakrits\Documents\GitHub\SAMrobotframework\TestCase\loginSuite.robot" id="s1" name="loginSuite">
+<test id="s1-t1" name="TC-001 : Login โดยระบุ User แต่ไม่ระบุ Password">
+<kw name="Login input User not input password" library="loginKeyword">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
 <arg>http://samsvoatest.ar.co.th/</arg>
 <arg>gc</arg>
 </arguments>
-<msg timestamp="20190902 10:37:00.226" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
-<status status="PASS" endtime="20190902 10:37:04.853" starttime="20190902 10:37:00.226"></status>
+<msg timestamp="20190902 11:18:19.463" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
+<status status="PASS" endtime="20190902 11:18:24.697" starttime="20190902 11:18:19.463"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
@@ -18,11 +18,176 @@
 <arg>u_username</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" endtime="20190902 10:37:04.917" starttime="20190902 10:37:04.853"></status>
+<status status="PASS" endtime="20190902 11:18:24.743" starttime="20190902 11:18:24.697"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20190902 10:37:06.052" starttime="20190902 10:37:04.917"></status>
+<status status="PASS" endtime="20190902 11:18:25.863" starttime="20190902 11:18:24.743"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>robot</arg>
+</arguments>
+<msg timestamp="20190902 11:18:25.865" level="INFO">Typing text 'robot' into text field 'u_username'.</msg>
+<status status="PASS" endtime="20190902 11:18:26.023" starttime="20190902 11:18:25.864"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>btn_signin</arg>
+</arguments>
+<msg timestamp="20190902 11:18:26.023" level="INFO">Clicking element 'btn_signin'.</msg>
+<status status="PASS" endtime="20190902 11:18:26.114" starttime="20190902 11:18:26.023"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>input User only Success</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:18:26.115" starttime="20190902 11:18:26.114"></status>
+</kw>
+<status status="PASS" endtime="20190902 11:18:26.115" starttime="20190902 11:18:19.462"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190902 11:18:28.276" starttime="20190902 11:18:26.116"></status>
+</kw>
+<tags>
+<tag>positive</tag>
+</tags>
+<status status="PASS" endtime="20190902 11:18:28.277" critical="yes" starttime="20190902 11:18:19.461"></status>
+</test>
+<test id="s1-t2" name="TC-002 : Login โดยระบุ Password แต่ไม่ระบุ User">
+<kw name="Login input Password not input User" library="loginKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://samsvoatest.ar.co.th/</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20190902 11:18:28.281" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
+<status status="PASS" endtime="20190902 11:18:33.198" starttime="20190902 11:18:28.281"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:18:33.270" starttime="20190902 11:18:33.199"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190902 11:18:34.396" starttime="20190902 11:18:33.271"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_pwd</arg>
+<arg>12345</arg>
+</arguments>
+<msg timestamp="20190902 11:18:34.396" level="INFO">Typing text '12345' into text field 'u_pwd'.</msg>
+<status status="PASS" endtime="20190902 11:18:34.515" starttime="20190902 11:18:34.396"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>btn_signin</arg>
+</arguments>
+<msg timestamp="20190902 11:18:34.516" level="INFO">Clicking element 'btn_signin'.</msg>
+<status status="PASS" endtime="20190902 11:18:34.598" starttime="20190902 11:18:34.516"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>input Password only Success</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:18:34.599" starttime="20190902 11:18:34.598"></status>
+</kw>
+<status status="PASS" endtime="20190902 11:18:34.599" starttime="20190902 11:18:28.281"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190902 11:18:36.760" starttime="20190902 11:18:34.600"></status>
+</kw>
+<tags>
+<tag>positive</tag>
+</tags>
+<status status="PASS" endtime="20190902 11:18:36.761" critical="yes" starttime="20190902 11:18:28.279"></status>
+</test>
+<test id="s1-t3" name="TC-003 : Login โดยไม่ระบุ User และ Password">
+<kw name="Login not input User and Password" library="loginKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://samsvoatest.ar.co.th/</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20190902 11:18:36.773" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
+<status status="PASS" endtime="20190902 11:18:42.223" starttime="20190902 11:18:36.772"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:18:42.290" starttime="20190902 11:18:42.223"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190902 11:18:43.426" starttime="20190902 11:18:42.291"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>btn_signin</arg>
+</arguments>
+<msg timestamp="20190902 11:18:43.428" level="INFO">Clicking element 'btn_signin'.</msg>
+<status status="PASS" endtime="20190902 11:18:43.570" starttime="20190902 11:18:43.427"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Popup Message Error</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:18:43.571" starttime="20190902 11:18:43.570"></status>
+</kw>
+<status status="PASS" endtime="20190902 11:18:43.571" starttime="20190902 11:18:36.771"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190902 11:18:45.752" starttime="20190902 11:18:43.572"></status>
+</kw>
+<tags>
+<tag>positive</tag>
+</tags>
+<status status="PASS" endtime="20190902 11:18:45.752" critical="yes" starttime="20190902 11:18:36.766"></status>
+</test>
+<test id="s1-t4" name="TC-004 : Login โดยระบุ User และ Password">
+<kw name="Login input User and Password" library="loginKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://samsvoatest.ar.co.th/</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20190902 11:18:45.757" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
+<status status="PASS" endtime="20190902 11:18:51.610" starttime="20190902 11:18:45.756"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:18:51.654" starttime="20190902 11:18:51.610"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190902 11:18:52.783" starttime="20190902 11:18:51.654"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -30,8 +195,8 @@
 <arg>u_username</arg>
 <arg>admin</arg>
 </arguments>
-<msg timestamp="20190902 10:37:06.053" level="INFO">Typing text 'admin' into text field 'u_username'.</msg>
-<status status="PASS" endtime="20190902 10:37:06.156" starttime="20190902 10:37:06.052"></status>
+<msg timestamp="20190902 11:18:52.784" level="INFO">Typing text 'admin' into text field 'u_username'.</msg>
+<status status="PASS" endtime="20190902 11:18:52.914" starttime="20190902 11:18:52.784"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -39,43 +204,455 @@
 <arg>u_pwd</arg>
 <arg>@$R12345</arg>
 </arguments>
-<msg timestamp="20190902 10:37:06.156" level="INFO">Typing text '@$R12345' into text field 'u_pwd'.</msg>
-<status status="PASS" endtime="20190902 10:37:06.262" starttime="20190902 10:37:06.156"></status>
+<msg timestamp="20190902 11:18:52.915" level="INFO">Typing text '@$R12345' into text field 'u_pwd'.</msg>
+<status status="PASS" endtime="20190902 11:18:53.029" starttime="20190902 11:18:52.914"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>//Class[@Class="iCheck-helper"]</arg>
+<arg>btn_signin</arg>
 </arguments>
-<msg timestamp="20190902 10:37:06.262" level="INFO">Clicking element '//Class[@Class="iCheck-helper"]'.</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190902 10:37:06.588" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190902 10:37:06.588" starttime="20190902 10:37:06.278"></status>
+<msg timestamp="20190902 11:18:53.030" level="INFO">Clicking element 'btn_signin'.</msg>
+<status status="PASS" endtime="20190902 11:18:53.115" starttime="20190902 11:18:53.029"></status>
 </kw>
-<msg timestamp="20190902 10:37:06.591" level="FAIL">Element with locator '//Class[@Class="iCheck-helper"]' not found.</msg>
-<status status="FAIL" endtime="20190902 10:37:06.591" starttime="20190902 10:37:06.262"></status>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Login Success</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:18:53.117" starttime="20190902 11:18:53.115"></status>
 </kw>
-<status status="FAIL" endtime="20190902 10:37:06.591" starttime="20190902 10:37:00.225"></status>
+<status status="PASS" endtime="20190902 11:18:53.117" starttime="20190902 11:18:45.756"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190902 11:18:55.309" starttime="20190902 11:18:53.118"></status>
 </kw>
 <tags>
 <tag>positive</tag>
 </tags>
-<status status="FAIL" endtime="20190902 10:37:06.592" critical="yes" starttime="20190902 10:37:00.223">Element with locator '//Class[@Class="iCheck-helper"]' not found.</status>
+<status status="PASS" endtime="20190902 11:18:55.310" critical="yes" starttime="20190902 11:18:45.754"></status>
+</test>
+<test id="s1-t5" name="TC-005 : Login โดยระบุ User ,Password และกำหนด Remember Me">
+<kw name="Login input User Password and Remember Me" library="loginKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://samsvoatest.ar.co.th/</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20190902 11:18:55.325" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
+<status status="PASS" endtime="20190902 11:19:00.400" starttime="20190902 11:18:55.325"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:19:00.463" starttime="20190902 11:19:00.401"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190902 11:19:01.598" starttime="20190902 11:19:00.463"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20190902 11:19:01.598" level="INFO">Typing text 'admin' into text field 'u_username'.</msg>
+<status status="PASS" endtime="20190902 11:19:01.720" starttime="20190902 11:19:01.598"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_pwd</arg>
+<arg>@$R12345</arg>
+</arguments>
+<msg timestamp="20190902 11:19:01.721" level="INFO">Typing text '@$R12345' into text field 'u_pwd'.</msg>
+<status status="PASS" endtime="20190902 11:19:01.833" starttime="20190902 11:19:01.720"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>remember_me</arg>
+</arguments>
+<msg timestamp="20190902 11:19:01.833" level="INFO">Double clicking element 'remember_me'.</msg>
+<status status="PASS" endtime="20190902 11:19:02.129" starttime="20190902 11:19:01.833"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>btn_signin</arg>
+</arguments>
+<msg timestamp="20190902 11:19:02.130" level="INFO">Clicking element 'btn_signin'.</msg>
+<status status="PASS" endtime="20190902 11:19:02.218" starttime="20190902 11:19:02.130"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Login Success</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:19:02.219" starttime="20190902 11:19:02.219"></status>
+</kw>
+<status status="PASS" endtime="20190902 11:19:02.220" starttime="20190902 11:18:55.324"></status>
+</kw>
+<tags>
+<tag>positive</tag>
+</tags>
+<status status="PASS" endtime="20190902 11:19:02.220" critical="yes" starttime="20190902 11:18:55.316"></status>
+</test>
+<test id="s1-t6" name="TC-006 : Login โดยระบุ User เป็นภาษาไทย และ Password เป็นภาษาไทย">
+<kw name="Login input User and Password is Thai" library="loginKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://samsvoatest.ar.co.th/</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20190902 11:19:02.227" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
+<status status="PASS" endtime="20190902 11:19:10.379" starttime="20190902 11:19:02.227"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:19:10.425" starttime="20190902 11:19:10.379"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190902 11:19:11.546" starttime="20190902 11:19:10.425"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>เทส</arg>
+</arguments>
+<msg timestamp="20190902 11:19:11.547" level="INFO">Typing text 'เทส' into text field 'u_username'.</msg>
+<status status="PASS" endtime="20190902 11:19:11.695" starttime="20190902 11:19:11.547"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_pwd</arg>
+<arg>เทส</arg>
+</arguments>
+<msg timestamp="20190902 11:19:11.695" level="INFO">Typing text 'เทส' into text field 'u_pwd'.</msg>
+<status status="PASS" endtime="20190902 11:19:11.791" starttime="20190902 11:19:11.695"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>btn_signin</arg>
+</arguments>
+<msg timestamp="20190902 11:19:11.792" level="INFO">Clicking element 'btn_signin'.</msg>
+<status status="PASS" endtime="20190902 11:19:11.866" starttime="20190902 11:19:11.791"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>input User and Password is Thai Success</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:19:11.868" starttime="20190902 11:19:11.867"></status>
+</kw>
+<status status="PASS" endtime="20190902 11:19:11.869" starttime="20190902 11:19:02.226"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190902 11:19:14.034" starttime="20190902 11:19:11.870"></status>
+</kw>
+<tags>
+<tag>positive</tag>
+</tags>
+<status status="PASS" endtime="20190902 11:19:14.036" critical="yes" starttime="20190902 11:19:02.223"></status>
+</test>
+<test id="s1-t7" name="TC-007 : Login โดยระบุ User เป็นภาษาไทย แต่ Password เป็นภาษาอังกฤษ">
+<kw name="Login input User is Thai but input Password is English" library="loginKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://samsvoatest.ar.co.th/</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20190902 11:19:14.053" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
+<status status="PASS" endtime="20190902 11:19:19.613" starttime="20190902 11:19:14.053"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:19:19.671" starttime="20190902 11:19:19.614"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190902 11:19:20.795" starttime="20190902 11:19:19.671"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>เทส</arg>
+</arguments>
+<msg timestamp="20190902 11:19:20.796" level="INFO">Typing text 'เทส' into text field 'u_username'.</msg>
+<status status="PASS" endtime="20190902 11:19:20.947" starttime="20190902 11:19:20.796"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_pwd</arg>
+<arg>TEST</arg>
+</arguments>
+<msg timestamp="20190902 11:19:20.948" level="INFO">Typing text 'TEST' into text field 'u_pwd'.</msg>
+<status status="PASS" endtime="20190902 11:19:21.082" starttime="20190902 11:19:20.947"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>btn_signin</arg>
+</arguments>
+<msg timestamp="20190902 11:19:21.082" level="INFO">Clicking element 'btn_signin'.</msg>
+<status status="PASS" endtime="20190902 11:19:21.172" starttime="20190902 11:19:21.082"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>input User is Thai but input Password is English Success</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:19:21.173" starttime="20190902 11:19:21.172"></status>
+</kw>
+<status status="PASS" endtime="20190902 11:19:21.173" starttime="20190902 11:19:14.051"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190902 11:19:23.451" starttime="20190902 11:19:21.174"></status>
+</kw>
+<tags>
+<tag>Negative</tag>
+</tags>
+<status status="PASS" endtime="20190902 11:19:23.451" critical="yes" starttime="20190902 11:19:14.042"></status>
+</test>
+<test id="s1-t8" name="TC-008 : Login โดยระบุ User เป็นภาษาอังกฤษ แต่ Password เป็นภาษาไทย">
+<kw name="Login input User is English but Password is Thai" library="loginKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://samsvoatest.ar.co.th/</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20190902 11:19:23.468" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
+<status status="PASS" endtime="20190902 11:19:28.942" starttime="20190902 11:19:23.467"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:19:28.999" starttime="20190902 11:19:28.942"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190902 11:19:30.127" starttime="20190902 11:19:28.999"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>TEST</arg>
+</arguments>
+<msg timestamp="20190902 11:19:30.128" level="INFO">Typing text 'TEST' into text field 'u_username'.</msg>
+<status status="PASS" endtime="20190902 11:19:30.258" starttime="20190902 11:19:30.128"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_pwd</arg>
+<arg>เทส</arg>
+</arguments>
+<msg timestamp="20190902 11:19:30.258" level="INFO">Typing text 'เทส' into text field 'u_pwd'.</msg>
+<status status="PASS" endtime="20190902 11:19:30.365" starttime="20190902 11:19:30.258"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>btn_signin</arg>
+</arguments>
+<msg timestamp="20190902 11:19:30.365" level="INFO">Clicking element 'btn_signin'.</msg>
+<status status="PASS" endtime="20190902 11:19:30.462" starttime="20190902 11:19:30.365"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>input User is English but Password is Thai Success</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:19:30.463" starttime="20190902 11:19:30.462"></status>
+</kw>
+<status status="PASS" endtime="20190902 11:19:30.463" starttime="20190902 11:19:23.466"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190902 11:19:32.623" starttime="20190902 11:19:30.464"></status>
+</kw>
+<tags>
+<tag>Negative</tag>
+</tags>
+<status status="PASS" endtime="20190902 11:19:32.624" critical="yes" starttime="20190902 11:19:23.455"></status>
+</test>
+<test id="s1-t9" name="TC-009 : Login โดยระบุ User เป็นตัวอักขระไทย แต่ Password เป็นภาษาอังกฤษ">
+<kw name="Login input User is Thai character but Password is English" library="loginKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://samsvoatest.ar.co.th/</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20190902 11:19:32.639" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
+<status status="PASS" endtime="20190902 11:19:38.403" starttime="20190902 11:19:32.638"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:19:38.466" starttime="20190902 11:19:38.403"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190902 11:19:39.596" starttime="20190902 11:19:38.466"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>ฯื๒๓๔</arg>
+</arguments>
+<msg timestamp="20190902 11:19:39.597" level="INFO">Typing text 'ฯื๒๓๔' into text field 'u_username'.</msg>
+<status status="PASS" endtime="20190902 11:19:39.743" starttime="20190902 11:19:39.596"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_pwd</arg>
+<arg>TEST</arg>
+</arguments>
+<msg timestamp="20190902 11:19:39.743" level="INFO">Typing text 'TEST' into text field 'u_pwd'.</msg>
+<status status="PASS" endtime="20190902 11:19:39.844" starttime="20190902 11:19:39.743"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>btn_signin</arg>
+</arguments>
+<msg timestamp="20190902 11:19:39.845" level="INFO">Clicking element 'btn_signin'.</msg>
+<status status="PASS" endtime="20190902 11:19:39.929" starttime="20190902 11:19:39.844"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>input User is Thai character but Password is English Success</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:19:39.930" starttime="20190902 11:19:39.929"></status>
+</kw>
+<status status="PASS" endtime="20190902 11:19:39.930" starttime="20190902 11:19:32.637"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190902 11:19:42.129" starttime="20190902 11:19:39.931"></status>
+</kw>
+<tags>
+<tag>Negative</tag>
+</tags>
+<status status="PASS" endtime="20190902 11:19:42.130" critical="yes" starttime="20190902 11:19:32.628"></status>
+</test>
+<test id="s1-t10" name="TC-010 : Login โดยระบุ User เป็นภาษาอังกฤษ แต่ Password เป็นตัวอักขระไทย">
+<kw name="Login input User is English but Password is Thai character" library="loginKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://samsvoatest.ar.co.th/</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20190902 11:19:42.136" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
+<status status="PASS" endtime="20190902 11:19:47.127" starttime="20190902 11:19:42.136"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:19:47.185" starttime="20190902 11:19:47.127"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190902 11:19:48.308" starttime="20190902 11:19:47.185"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_username</arg>
+<arg>TEST</arg>
+</arguments>
+<msg timestamp="20190902 11:19:48.308" level="INFO">Typing text 'TEST' into text field 'u_username'.</msg>
+<status status="PASS" endtime="20190902 11:19:48.443" starttime="20190902 11:19:48.308"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>u_pwd</arg>
+<arg>ฯื๒๓๔</arg>
+</arguments>
+<msg timestamp="20190902 11:19:48.444" level="INFO">Typing text 'ฯื๒๓๔' into text field 'u_pwd'.</msg>
+<status status="PASS" endtime="20190902 11:19:48.544" starttime="20190902 11:19:48.443"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>btn_signin</arg>
+</arguments>
+<msg timestamp="20190902 11:19:48.545" level="INFO">Clicking element 'btn_signin'.</msg>
+<status status="PASS" endtime="20190902 11:19:48.631" starttime="20190902 11:19:48.544"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>input User is Thai character but Password is English Success</arg>
+</arguments>
+<status status="PASS" endtime="20190902 11:19:48.632" starttime="20190902 11:19:48.631"></status>
+</kw>
+<status status="PASS" endtime="20190902 11:19:48.632" starttime="20190902 11:19:42.136"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190902 11:19:50.810" starttime="20190902 11:19:48.633"></status>
+</kw>
+<tags>
+<tag>Negative</tag>
+</tags>
+<status status="PASS" endtime="20190902 11:19:50.811" critical="yes" starttime="20190902 11:19:42.132"></status>
 </test>
 <doc>LOGIN</doc>
-<status status="FAIL" endtime="20190902 10:37:06.595" starttime="20190902 10:36:59.936"></status>
+<status status="PASS" endtime="20190902 11:19:50.821" starttime="20190902 11:18:19.167"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="10">Critical Tests</stat>
+<stat fail="0" pass="10">All Tests</stat>
 </total>
 <tag>
-<stat fail="1" pass="0">positive</stat>
+<stat fail="0" pass="4">Negative</stat>
+<stat fail="0" pass="6">positive</stat>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="loginSuite" pass="0">loginSuite</stat>
+<stat fail="0" id="s1" name="loginSuite" pass="10">loginSuite</stat>
 </suite>
 </statistics>
 <errors>

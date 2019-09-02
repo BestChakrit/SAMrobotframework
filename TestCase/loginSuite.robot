@@ -28,7 +28,7 @@ TC-004 : Login โดยระบุ User และ Password
 TC-005 : Login โดยระบุ User ,Password และกำหนด Remember Me
     Login input User Password and Remember Me
     [Tags]         positive   
-    [Teardown]    
+    [Teardown]     Close Browser
 
 TC-006 : Login โดยระบุ User เป็นภาษาไทย และ Password เป็นภาษาไทย
     Login input User and Password is Thai
@@ -36,7 +36,7 @@ TC-006 : Login โดยระบุ User เป็นภาษาไทย แ�
     [Teardown]     Close Browser
     
 TC-007 : Login โดยระบุ User เป็นภาษาไทย แต่ Password เป็นภาษาอังกฤษ
-    Login input User is Thai but input Password เis English
+    Login input User is Thai but input Password is English
     [Tags]         Negative   
     [Teardown]     Close Browser
 

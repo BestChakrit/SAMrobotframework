@@ -44,8 +44,7 @@ Login input User Password and Remember Me
     Maximize Browser Window
     Input Text	      u_username       admin
     Input Text        u_pwd            @$R12345
-    Click Element     //Class[@Class="iCheck-helper"]
-    Click Element     //Class[@Class="iCheck-helper"]
+    Double Click Element     remember_me 
     Click Element     btn_signin
     Log to console     Login Success
 
