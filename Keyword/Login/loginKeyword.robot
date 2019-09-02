@@ -3,10 +3,8 @@ Documentation   TEST SAM
 Library        Selenium2Library 
 Library        BuiltIn
 
-
-    
 *** Keywords ***
-Login input User not input password
+Login input User not input passwordnew
     Open Browser	       http://samsvoatest.ar.co.th/     gc
     Wait Until Element Is Visible      u_username     timeout=10
     Maximize Browser Window
