@@ -242,7 +242,7 @@ Open job more 1 job
     Click Element       ${BtnNewjob} 
     Sleep    ${Sleep}
     Wait Until Element Is Visible      ${SelectServiceOrderType}     timeout=15
-    Select From List By Value       ${SelectServiceOrderType}       ${V_ServiceOrderType_CarryIn}
+    Select From List By Value         ${SelectServiceOrderType}       ${V_ServiceOrderType_CarryIn}
     Select From List By Value       ${SelectServiceType}         ${V_ServiceType} 
     input text          ${TxtSerial}         ${V_Serial5}
     Click Element       ${BtnSearchSerial}    
