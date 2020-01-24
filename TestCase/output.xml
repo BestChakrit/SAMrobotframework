@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20190903 17:19:28.500" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
-<suite source="C:\Users\chakrits\Documents\GitHub\SAMrobotframework\TestCase\openjobrepairSuite.robot" id="s1" name="openjobrepairSuite">
-<test id="s1-t1" name="TC-019 : ทำการปริ้นใบบริการ">
-<kw name="Print Job Repair" library="openjobrepairKeyword">
+<robot rpa="false" generated="20191118 14:45:23.795" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
+<suite source="C:\Users\chakrits\Documents\GitHub\SAMrobotframework\TestCase\openjobonsiteSuite.robot" id="s1" name="openjobonsiteSuite">
+<test id="s1-t1" name="TC-01 : Open Job Onsite">
+<kw name="Open Job Onsite" library="openjobonsiteKeyword">
 <kw name="Login input User and Password" library="loginKeyword">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
@@ -10,8 +10,8 @@
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 </arguments>
-<msg timestamp="20190903 17:19:28.843" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
-<status status="PASS" endtime="20190903 17:19:33.527" starttime="20190903 17:19:28.843"></status>
+<msg timestamp="20191118 14:45:24.734" level="INFO">Opening browser 'gc' to base url 'http://samsvoatest.ar.co.th/'.</msg>
+<status status="PASS" endtime="20191118 14:45:38.851" starttime="20191118 14:45:24.734"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
@@ -19,11 +19,11 @@
 <arg>${Txtusername}</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" endtime="20190903 17:19:33.596" starttime="20190903 17:19:33.528"></status>
+<status status="PASS" endtime="20191118 14:45:39.496" starttime="20191118 14:45:38.852"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20190903 17:19:34.730" starttime="20190903 17:19:33.596"></status>
+<status status="PASS" endtime="20191118 14:45:40.769" starttime="20191118 14:45:39.496"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -31,8 +31,8 @@
 <arg>${Txtusername}</arg>
 <arg>${V_username}</arg>
 </arguments>
-<msg timestamp="20190903 17:19:34.730" level="INFO">Typing text 'admin' into text field 'u_username'.</msg>
-<status status="PASS" endtime="20190903 17:19:34.967" starttime="20190903 17:19:34.730"></status>
+<msg timestamp="20191118 14:45:40.770" level="INFO">Typing text 'admin' into text field 'u_username'.</msg>
+<status status="PASS" endtime="20191118 14:45:41.102" starttime="20191118 14:45:40.769"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -40,57 +40,57 @@
 <arg>${Txtpassword}</arg>
 <arg>${V_password}</arg>
 </arguments>
-<msg timestamp="20190903 17:19:34.968" level="INFO">Typing text '@$R12345' into text field 'u_pwd'.</msg>
-<status status="PASS" endtime="20190903 17:19:35.067" starttime="20190903 17:19:34.968"></status>
+<msg timestamp="20191118 14:45:41.103" level="INFO">Typing text '@$R12345' into text field 'u_pwd'.</msg>
+<status status="PASS" endtime="20191118 14:45:41.212" starttime="20191118 14:45:41.103"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${Btnlogin}</arg>
 </arguments>
-<msg timestamp="20190903 17:19:35.068" level="INFO">Clicking element 'btn_signin'.</msg>
-<status status="PASS" endtime="20190903 17:19:35.147" starttime="20190903 17:19:35.068"></status>
+<msg timestamp="20191118 14:45:41.212" level="INFO">Clicking element 'btn_signin'.</msg>
+<status status="PASS" endtime="20191118 14:45:41.328" starttime="20191118 14:45:41.212"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>Login Success</arg>
 </arguments>
-<status status="PASS" endtime="20190903 17:19:35.149" starttime="20190903 17:19:35.148"></status>
+<status status="PASS" endtime="20191118 14:45:41.329" starttime="20191118 14:45:41.328"></status>
 </kw>
-<status status="PASS" endtime="20190903 17:19:35.149" starttime="20190903 17:19:28.843"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element ``locator`` is visible.</doc>
-<arguments>
-<arg>${MenuRepairjobmanagement}</arg>
-<arg>timeout=15</arg>
-</arguments>
-<status status="PASS" endtime="20190903 17:19:40.413" starttime="20190903 17:19:35.150"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${MenuRepairjobmanagement}</arg>
-</arguments>
-<msg timestamp="20190903 17:19:40.414" level="INFO">Clicking element '//*[contains(text(), "Repair Job Management")]'.</msg>
-<status status="PASS" endtime="20190903 17:19:40.515" starttime="20190903 17:19:40.414"></status>
+<status status="PASS" endtime="20191118 14:45:41.329" starttime="20191118 14:45:24.734"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
-<arg>${Submenujobrepair}</arg>
+<arg>${MenuOnsitejobmanagement}</arg>
 <arg>timeout=15</arg>
 </arguments>
-<status status="PASS" endtime="20190903 17:19:40.795" starttime="20190903 17:19:40.515"></status>
+<status status="PASS" endtime="20191118 14:45:46.638" starttime="20191118 14:45:41.329"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>${Submenujobrepair}</arg>
+<arg>${MenuOnsitejobmanagement}</arg>
 </arguments>
-<msg timestamp="20190903 17:19:40.796" level="INFO">Clicking element '//*[contains(text(), "Job Repair")]'.</msg>
-<status status="PASS" endtime="20190903 17:19:43.597" starttime="20190903 17:19:40.795"></status>
+<msg timestamp="20191118 14:45:46.639" level="INFO">Clicking element '//*[contains(text(), "Onsite Job Management")]'.</msg>
+<status status="PASS" endtime="20191118 14:45:46.737" starttime="20191118 14:45:46.639"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Submenujobonsite}</arg>
+<arg>timeout=15</arg>
+</arguments>
+<status status="PASS" endtime="20191118 14:45:47.002" starttime="20191118 14:45:46.737"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Submenujobonsite}</arg>
+</arguments>
+<msg timestamp="20191118 14:45:47.003" level="INFO">Clicking element 'id=jobonsiteindex'.</msg>
+<status status="PASS" endtime="20191118 14:45:50.056" starttime="20191118 14:45:47.002"></status>
 </kw>
 <kw name="Scroll Page To Location" library="Function">
 <arguments>
@@ -102,116 +102,150 @@
 <arguments>
 <arg>window.scrollTo(${x_location},${y_location})</arg>
 </arguments>
-<msg timestamp="20190903 17:19:43.601" level="INFO">Executing JavaScript:
+<msg timestamp="20191118 14:45:50.060" level="INFO">Executing JavaScript:
 window.scrollTo(200,200)
 Without any arguments.</msg>
-<status status="PASS" endtime="20190903 17:19:43.611" starttime="20190903 17:19:43.598"></status>
+<status status="PASS" endtime="20191118 14:45:50.109" starttime="20191118 14:45:50.057"></status>
 </kw>
-<status status="PASS" endtime="20190903 17:19:43.612" starttime="20190903 17:19:43.597"></status>
+<status status="PASS" endtime="20191118 14:45:50.110" starttime="20191118 14:45:50.057"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20190903 17:19:45.624" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20190903 17:19:45.624" starttime="20190903 17:19:43.612"></status>
+<msg timestamp="20191118 14:45:52.112" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191118 14:45:52.112" starttime="20191118 14:45:50.110"></status>
 </kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element ``locator`` is visible.</doc>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is not visible.</doc>
 <arguments>
-<arg>${BtnEdit}</arg>
+<arg>${Loading}</arg>
 <arg>timeout=15</arg>
 </arguments>
-<status status="PASS" endtime="20190903 17:19:45.687" starttime="20190903 17:19:45.624"></status>
+<status status="PASS" endtime="20191118 14:45:52.128" starttime="20191118 14:45:52.112"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>${BtnEdit}</arg>
+<arg>${BtnNewjob}</arg>
 </arguments>
-<msg timestamp="20190903 17:19:45.687" level="INFO">Clicking element '//*[contains(text(), "Edit")]'.</msg>
-<status status="PASS" endtime="20190903 17:19:45.774" starttime="20190903 17:19:45.687"></status>
+<msg timestamp="20191118 14:45:52.128" level="INFO">Clicking element '//*[@ng-click="addJobOnSite()"]'.</msg>
+<status status="PASS" endtime="20191118 14:45:52.263" starttime="20191118 14:45:52.128"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${Loading}</arg>
+<arg>timeout=15</arg>
+</arguments>
+<status status="PASS" endtime="20191118 14:45:56.378" starttime="20191118 14:45:52.263"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Sleep}</arg>
+</arguments>
+<msg timestamp="20191118 14:45:59.384" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191118 14:45:59.384" starttime="20191118 14:45:56.378"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
-<arg>${BtnPrint}</arg>
+<arg>${SelectServiceOrderType}</arg>
 <arg>timeout=15</arg>
 </arguments>
-<status status="PASS" endtime="20190903 17:19:47.347" starttime="20190903 17:19:45.775"></status>
+<status status="PASS" endtime="20191118 14:45:59.444" starttime="20191118 14:45:59.384"></status>
 </kw>
 <kw name="Set Focus To Element" library="Selenium2Library">
 <doc>Sets focus to element identified by ``locator``.</doc>
 <arguments>
-<arg>${BtnPrint}</arg>
+<arg>${SerialNumber}</arg>
 </arguments>
-<status status="PASS" endtime="20190903 17:19:47.370" starttime="20190903 17:19:47.348"></status>
+<status status="PASS" endtime="20191118 14:45:59.480" starttime="20191118 14:45:59.444"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SerialNumber}</arg>
+<arg>CNC22200TK</arg>
+</arguments>
+<msg timestamp="20191118 14:45:59.481" level="INFO">Typing text 'CNC22200TK' into text field 'txtSerialNumber'.</msg>
+<status status="PASS" endtime="20191118 14:45:59.914" starttime="20191118 14:45:59.480"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>${BtnPrint}</arg>
+<arg>${BtnSearchSerial}</arg>
 </arguments>
-<msg timestamp="20190903 17:19:47.370" level="INFO">Clicking element '//button[@ng-click="JobRepair_EditSave(1)"]'.</msg>
-<status status="PASS" endtime="20190903 17:19:47.506" starttime="20190903 17:19:47.370"></status>
+<msg timestamp="20191118 14:45:59.915" level="INFO">Clicking element '//*[@ng-click="openSerialNumberPopup()"]'.</msg>
+<status status="PASS" endtime="20191118 14:46:00.014" starttime="20191118 14:45:59.914"></status>
 </kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element ``locator`` is visible.</doc>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is not visible.</doc>
 <arguments>
-<arg>${CheckboxSelectAllPrint}</arg>
+<arg>${Loading}</arg>
 <arg>timeout=15</arg>
 </arguments>
-<status status="PASS" endtime="20190903 17:19:48.664" starttime="20190903 17:19:47.507"></status>
+<status status="PASS" endtime="20191118 14:46:00.785" starttime="20191118 14:46:00.014"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191118 14:46:03.791" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191118 14:46:03.791" starttime="20191118 14:46:00.785"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>${CheckboxSelectAllPrint}</arg>
+<arg>${BtnOK}</arg>
 </arguments>
-<msg timestamp="20190903 17:19:48.665" level="INFO">Clicking element 'print_checkAll'.</msg>
-<status status="PASS" endtime="20190903 17:19:48.752" starttime="20190903 17:19:48.665"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${BtnGenerate}</arg>
-</arguments>
-<msg timestamp="20190903 17:19:48.753" level="INFO">Clicking element '//*[@ng-click="Submit()"]'.</msg>
-<status status="PASS" endtime="20190903 17:19:48.849" starttime="20190903 17:19:48.752"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element ``locator`` is visible.</doc>
-<arguments>
-<arg>${BtnDownload}</arg>
-<arg>timeout=15</arg>
-</arguments>
-<status status="PASS" endtime="20190903 17:19:50.494" starttime="20190903 17:19:48.849"></status>
+<msg timestamp="20191118 14:46:03.791" level="INFO">Clicking element '//*[@class="akow-msgbox-okbutton1 btn bg-blue-gradient akow-msgbox-okbutton"]'.</msg>
+<status status="PASS" endtime="20191118 14:46:03.888" starttime="20191118 14:46:03.791"></status>
 </kw>
 <kw name="Set Focus To Element" library="Selenium2Library">
 <doc>Sets focus to element identified by ``locator``.</doc>
 <arguments>
-<arg>${BtnPrintConfirm}</arg>
+<arg>${Refence}</arg>
 </arguments>
-<status status="PASS" endtime="20190903 17:19:50.543" starttime="20190903 17:19:50.494"></status>
+<status status="PASS" endtime="20191118 14:46:03.926" starttime="20191118 14:46:03.889"></status>
 </kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>${BtnPrintConfirm}</arg>
+<arg>${Refence}</arg>
+<arg>test ref</arg>
 </arguments>
-<msg timestamp="20190903 17:19:50.543" level="INFO">Clicking element '//*[@onclick="document.getElementById('PDFtoPrint').focus(); document.getElementById('PDFtoPrint').contentWindow.print();"]'.</msg>
-<status status="PASS" endtime="20190903 17:19:55.021" starttime="20190903 17:19:50.543"></status>
+<msg timestamp="20191118 14:46:03.927" level="INFO">Typing text 'test ref' into text field 'id=txtCustomerReferNumber'.</msg>
+<status status="PASS" endtime="20191118 14:46:04.111" starttime="20191118 14:46:03.926"></status>
 </kw>
-<status status="PASS" endtime="20190903 17:19:55.022" starttime="20190903 17:19:28.843"></status>
+<kw name="Set Focus To Element" library="Selenium2Library">
+<doc>Sets focus to element identified by ``locator``.</doc>
+<arguments>
+<arg>${DetailProblem}</arg>
+</arguments>
+<status status="PASS" endtime="20191118 14:46:04.141" starttime="20191118 14:46:04.111"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${DetailProblem}</arg>
+<arg>testpap</arg>
+</arguments>
+<msg timestamp="20191118 14:46:04.142" level="INFO">Typing text 'testpap' into text field 'id=txtProblemDetail'.</msg>
+<status status="PASS" endtime="20191118 14:46:04.256" starttime="20191118 14:46:04.142"></status>
+</kw>
+<status status="PASS" endtime="20191118 14:46:04.256" starttime="20191118 14:45:24.734"></status>
 </kw>
 <tags>
 <tag>positive</tag>
 </tags>
-<status status="PASS" endtime="20190903 17:19:55.023" critical="yes" starttime="20190903 17:19:28.843"></status>
+<status status="PASS" endtime="20191118 14:46:04.256" critical="yes" starttime="20191118 14:45:24.734"></status>
 </test>
 <doc>LOGIN</doc>
-<status status="PASS" endtime="20190903 17:19:55.026" starttime="20190903 17:19:28.500"></status>
+<status status="PASS" endtime="20191118 14:46:04.274" starttime="20191118 14:45:23.811"></status>
 </suite>
 <statistics>
 <total>
@@ -222,7 +256,7 @@ Without any arguments.</msg>
 <stat fail="0" pass="1">positive</stat>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="openjobrepairSuite" pass="1">openjobrepairSuite</stat>
+<stat fail="0" id="s1" name="openjobonsiteSuite" pass="1">openjobonsiteSuite</stat>
 </suite>
 </statistics>
 <errors>

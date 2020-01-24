@@ -96,9 +96,49 @@ Login input User is English but Password is Thai character
 
 
 
+Login Engineer
+    Open Browser	       ${URL}      ${Browser} 
+    Wait Until Element Is Visible      ${Txtusername}      timeout=10
+    Maximize Browser Window
+    Input Text	      ${Txtusername}          ${V_username_engineer}
+    Input Text        ${Txtpassword}          ${V_password_engineer}
+    Click Element     ${Btnlogin} 
+    Log to console    Login Engineer Success
+
+Login Engineer Case Engineer Other People
+    Open Browser	       ${URL}      ${Browser} 
+    Wait Until Element Is Visible      ${Txtusername}      timeout=10
+    Maximize Browser Window
+    Input Text	      ${Txtusername}          ${V_username_engineerother}
+    Input Text        ${Txtpassword}          ${V_password_engineerother}
+    Click Element     ${Btnlogin} 
+    Log to console    Login Engineer Case Engineer Other People Success
 
 
+Login Tech Scheduler
+    Open Browser	       ${URL}      ${Browser} 
+    Wait Until Element Is Visible      ${Txtusername}      timeout=10
+    Maximize Browser Window
+    Input Text	      ${Txtusername}          ${V_username_TechScheduler}
+    Input Text        ${Txtpassword}          ${V_password_TechScheduler}
+    Click Element     ${Btnlogin} 
+    Log to console    Login Tech Scheduler Success
 
+Login Services Quotation
+    Open Browser	       ${URL}      ${Browser} 
+    Wait Until Element Is Visible      ${Txtusername}      timeout=10
+    Maximize Browser Window
+    Input Text	      ${Txtusername}          ${V_username_ServicesQuotation}
+    Input Text        ${Txtpassword}          ${V_password_ServicesQuotation}
+    Click Element     ${Btnlogin} 
+    Log to console    Login Services Quotation Success
 
-
+Login Stock Center
+    Open Browser	       ${URL}      ${Browser} 
+    Wait Until Element Is Visible      ${Txtusername}      timeout=10
+    Maximize Browser Window
+    Input Text	      ${Txtusername}          ${V_username_StockCenter}
+    Input Text        ${Txtpassword}          ${V_password_StockCenter}
+    Click Element     ${Btnlogin} 
+    Log to console    Login Services Stock Center Success
 

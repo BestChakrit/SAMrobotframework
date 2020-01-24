@@ -26,10 +26,10 @@ TC-014 : Open Job กรณีระบุ Serial แล้วทำการค
     [Tags]         positive      
     [Teardown]     Close Browser
 
-TC-015 : Open Job กรณีไม่ระบุ Serial แต่ไปค้นจากผลิตภัณฑ์และยี่ห้อผลิตภัณฑ์ 
-    Open Job Case not input Serial but search product  
-    [Tags]         positive      
-    [Teardown]     Close Browser
+# TC-015 : Open Job กรณีไม่ระบุ Serial แต่ไปค้นจากผลิตภัณฑ์และยี่ห้อผลิตภัณฑ์ 
+#     Open Job Case not input Serial but search product  
+#     [Tags]         positive      
+#     [Teardown]     Close Browser
 
 TC-016 : เปิด Job Repair โดยที่ไม่ได้ใส่ข้อมูลที่จำเป็น
     Open Job not input require
